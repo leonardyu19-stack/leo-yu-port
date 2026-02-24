@@ -38,10 +38,10 @@ const timelineData: TimelineItem[] = [
 ];
 
 const socialLinks = [
-  { label: 'LI', href: 'https://www.linkedin.com/in/leonard-h-yu/' },
-  { label: 'IG', href: 'https://www.instagram.com/leoyu.mp4/' },
-  { label: 'TT', href: 'https://www.tiktok.com/@leoyu.mp4' },
-  { label: 'Portfolio', href: 'https://leonardyu2001.wixsite.com/leo-yu' },
+  { label: 'LI', full: 'LinkedIn', href: 'https://www.linkedin.com/in/leonard-h-yu/' },
+  { label: 'IG', full: 'Instagram', href: 'https://www.instagram.com/leoyu.mp4/' },
+  { label: 'TT', full: 'TikTok', href: 'https://www.tiktok.com/@leoyu.mp4' },
+  { label: 'Port', full: 'Portfolio', href: 'https://leonardyu2001.wixsite.com/leo-yu' },
 ];
 
 function LeoTime() {
@@ -79,12 +79,36 @@ export default function App() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-              className="text-[11px] font-medium opacity-50 hover:opacity-100 transition-opacity uppercase tracking-widest"
+              initial="initial"
+              whileHover="hover"
+              animate="animate"
+              variants={{
+                initial: { opacity: 0, y: 10 },
+                animate: { opacity: 1, y: 0, transition: { delay: i * 0.05 } }
+              }}
+              className="text-[11px] font-medium opacity-50 hover:opacity-100 transition-opacity uppercase tracking-widest relative"
             >
-              {link.label}
+              <span className="invisible">{link.full}</span>
+              <motion.span 
+                className="absolute left-0 top-0 whitespace-nowrap"
+                variants={{
+                  initial: { opacity: 1 },
+                  hover: { opacity: 0 }
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                {link.label}
+              </motion.span>
+              <motion.span 
+                className="absolute left-0 top-0 whitespace-nowrap"
+                variants={{
+                  initial: { opacity: 0 },
+                  hover: { opacity: 1 }
+                }}
+                transition={{ duration: 0.2 }}
+              >
+                {link.full}
+              </motion.span>
             </motion.a>
           ))}
         </nav>
