@@ -10,7 +10,7 @@ interface TimelineItem {
 }
 
 const timelineData: TimelineItem[] = [
-  { date: '02.20.26', content: 'Reaches 200k+ followers in 3 months' },
+  { date: '02.20.26', content: 'Reaches ', linkText: '200k+ followers', link: 'https://beacons.ai/leoyu.mp4/mediakit', suffix: ' in 3 months' },
   { date: '12.05.25', content: 'Joins ', linkText: 'Cal AI', link: 'https://calai.app', suffix: ' as growth' },
   { date: '12.03.25', content: 'Launches freelance personal brand & content strategy consulting' },
   { date: '11.27.25', content: 'Joins ', linkText: 'MagicPath AI', link: 'https://www.magicpath.ai', suffix: ' as growth' },
