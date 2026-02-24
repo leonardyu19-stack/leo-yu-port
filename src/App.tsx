@@ -72,7 +72,7 @@ export default function App() {
           leo.
         </motion.h1>
         
-        <nav className="flex gap-4">
+        <nav className="flex gap-x-4 gap-y-2 flex-wrap justify-end">
           {socialLinks.map((link, i) => (
             <motion.a
               key={link.label}
@@ -88,27 +88,35 @@ export default function App() {
               }}
               className="text-[11px] font-medium opacity-50 hover:opacity-100 transition-opacity uppercase tracking-widest relative"
             >
-              <span className="invisible">{link.full}</span>
-              <motion.span 
-                className="absolute left-0 top-0 whitespace-nowrap"
-                variants={{
-                  initial: { opacity: 1 },
-                  hover: { opacity: 0 }
-                }}
-                transition={{ duration: 0.2 }}
-              >
-                {link.label}
-              </motion.span>
-              <motion.span 
-                className="absolute left-0 top-0 whitespace-nowrap"
-                variants={{
-                  initial: { opacity: 0 },
-                  hover: { opacity: 1 }
-                }}
-                transition={{ duration: 0.2 }}
-              >
+              {/* Desktop View: Reveal on Hover */}
+              <span className="hidden md:block relative">
+                <span className="invisible">{link.full}</span>
+                <motion.span 
+                  className="absolute left-0 top-0 whitespace-nowrap"
+                  variants={{
+                    initial: { opacity: 1 },
+                    hover: { opacity: 0 }
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {link.label}
+                </motion.span>
+                <motion.span 
+                  className="absolute left-0 top-0 whitespace-nowrap"
+                  variants={{
+                    initial: { opacity: 0 },
+                    hover: { opacity: 1 }
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {link.full}
+                </motion.span>
+              </span>
+
+              {/* Mobile View: Always Full */}
+              <span className="md:hidden">
                 {link.full}
-              </motion.span>
+              </span>
             </motion.a>
           ))}
         </nav>
@@ -176,3 +184,4 @@ export default function App() {
     </div>
   );
 }
+
