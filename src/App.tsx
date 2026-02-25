@@ -24,7 +24,7 @@ const timelineData: TimelineItem[] = [
   { date: '09.06.22', content: 'Co-founds ', linkText: 'MyoGlove', link: 'https://www.rev1ventures.com/blog/motivational-medicine-treats-acute-chronic-pain-touch/' },
   { date: '04.01.22', content: 'Joins ', linkText: 'Red Bull', link: 'https://www.redbull.com/us-en', suffix: ' marketing' },
   { date: '02.26.21', content: 'Becomes licensed ', linkText: 'real estate agent', link: 'https://www.realtor.com/realestateagents/608672f8eae679001210a3f7' },
-  { date: '11.2020', content: 'Scales two faceless TikTok accounts to 50k+ combined followers' },
+  { date: '11.15.20', content: 'Scales two faceless TikTok accounts to 50k+ combined followers' },
   { date: '09.23.20', content: 'Launches first e-commerce brand, sells out in 30 days' },
   { date: '01.03.20', content: 'Makes first $1000 trading stock options' },
   { date: '08.16.19', content: 'Starts college at OSU' },
@@ -184,4 +184,3 @@ export default function App() {
     </div>
   );
 }
-
