@@ -17,7 +17,7 @@ const timelineData: TimelineItem[] = [
   { date: '12.03.25', content: 'Launches freelance personal brand & content strategy consulting' },
   { date: '11.27.25', content: 'Joins ', linkText: 'MagicPath AI', link: 'https://www.magicpath.ai', suffix: ' as growth' },
   { date: '11.12.25', content: 'Begins building personal brand from scratch' },
-  { date: '09.02.25', content: 'Moves to Miami', FL },
+  { date: '09.02.25', content: 'Moves to Miami, FL' },
   { date: '06.23.25', content: 'Joins ', linkText: 'ProMedia', link: 'https://promedia.com', suffix: ' Accounts Team' },
   { date: '10.01.23', content: 'Joins ', linkText: 'Epic Systems', link: 'https://www.epic.com', suffix: ' as Project Manager' },
   { date: '09.03.23', content: 'Moves to Madison, WI' },
