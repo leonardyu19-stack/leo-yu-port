@@ -10,7 +10,7 @@ interface TimelineItem {
 }
 
 const timelineData: TimelineItem[] = [
-  { date: '03.23.26', content: 'Coming soon...' },
+  { date: '03.23.26', content: 'Joins ', linkText: 'Stan', link: 'https://www.stan.store', suffix: ' Partnerships Team' },
   { date: '03.15.26', content: 'Moves to Los Angeles, CA' },
   { date: '02.20.26', content: 'Reaches ', linkText: '200k+ followers', link: 'https://beacons.ai/leoyu.mp4/mediakit', suffix: ' in 3 months' },
   { date: '12.05.25', content: 'Joins ', linkText: 'Cal AI', link: 'https://calai.app', suffix: ' as growth' },
